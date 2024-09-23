@@ -15,8 +15,12 @@
     position: relative;
     border-radius: 25px;
     transform: rotateY(180deg);
+    scale: 100%;
     backface-visibility: hidden;
-    transition: transform 2s;
+    transition: transform 1s, scale .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-back {
@@ -25,16 +29,20 @@
     height: 100%;
     position: relative;
     border-radius: 25px;
+    transform: rotateY(0deg);
+    scale: 100%;
     bottom: var(--card-height);
     backface-visibility: hidden;
-    transition: transform 2s;
-
+    transition: transform 1s, scale .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card:hover .card-back {
-    transform: rotateY(180deg);
+    scale: 110%;
 }
 
 .card:hover .card-front {
-    transform: rotateY(0deg);
+    scale: 110%;
 }
